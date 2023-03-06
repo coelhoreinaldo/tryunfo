@@ -17,13 +17,19 @@ class App extends React.Component {
       cardTrunfo: false,
       hasTrunfo: false,
       isSaveButtonDisabled: true,
-      card: [],
+      cards: [],
     };
 
     this.onInputChange = this.onInputChange.bind(this);
     this.validateFields = this.validateFields.bind(this);
     this.onSaveButtonClick = this.onSaveButtonClick.bind(this);
   }
+
+  // handleValidate = () => {
+  //   const { cards } = this.state;
+  //   const includesTrunfo = cards.map((card) => card.)
+  //   cardTrunfo ? this.setState({ hasTrunfo: true}) : this.setState({ hasTrunfo:false })
+  // };
 
   onInputChange({ target }) {
     const { name, value } = target;
@@ -37,16 +43,19 @@ class App extends React.Component {
   onSaveButtonClick() {
     const { cardName, cardDescription, cardImage, cardRare,
       cardAttr1, cardAttr2, cardAttr3 } = this.state;
+
+    const newCard = {
+      cardName,
+      cardDescription,
+      cardImage,
+      cardRare,
+      cardAttr1,
+      cardAttr2,
+      cardAttr3,
+    };
+
     this.setState((previousState) => ({
-      card: [...previousState.card, {
-        cardName,
-        cardDescription,
-        cardImage,
-        cardRare,
-        cardAttr1,
-        cardAttr2,
-        cardAttr3,
-      }],
+      cards: [...previousState.cards, newCard],
       cardName: '',
       cardDescription: '',
       cardImage: '',
