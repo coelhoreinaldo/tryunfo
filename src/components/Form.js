@@ -3,7 +3,7 @@ import React from 'react';
 export default class Form extends React.Component {
   render() {
     return (
-      <form>
+      <form style={ { display: 'flex', flexDirection: 'column' } }>
         <label>
           Nome da Carta
           <input type="text" data-testid="name-input" />
