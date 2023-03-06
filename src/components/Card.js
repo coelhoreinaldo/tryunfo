@@ -3,9 +3,8 @@ import PropTypes from 'prop-types';
 
 export default class Card extends React.Component {
   render() {
-    const { formState } = this.props;
     const { cardName, cardDescription, cardAttr1, cardAttr2,
-      cardAttr3, cardImage, cardRare, cardTrunfo } = formState;
+      cardAttr3, cardImage, cardRare, cardTrunfo } = this.props;
     return (
       <section>
         <h3 data-testid="name-card">{cardName}</h3>
@@ -19,25 +18,22 @@ export default class Card extends React.Component {
         <p data-testid="attr2-card">{cardAttr2}</p>
         <p data-testid="attr3-card">{cardAttr3}</p>
         <p data-testid="rare-card">{cardRare}</p>
-        <p data-testid="trunfo-card">
-          {
-            cardTrunfo && 'Super Trunfo'
-          }
-        </p>
+
+        {
+          cardTrunfo && <p data-testid="trunfo-card">Super Trunfo</p>
+        }
       </section>
     );
   }
 }
 
 Card.propTypes = {
-  formState: PropTypes.shape({
-    cardName: PropTypes.string.isRequired,
-    cardDescription: PropTypes.string.isRequired,
-    cardAttr1: PropTypes.string.isRequired,
-    cardAttr2: PropTypes.string.isRequired,
-    cardAttr3: PropTypes.string.isRequired,
-    cardImage: PropTypes.string.isRequired,
-    cardRare: PropTypes.string.isRequired,
-    cardTrunfo: PropTypes.string.isRequired,
-  }).isRequired,
+  cardName: PropTypes.string.isRequired,
+  cardDescription: PropTypes.string.isRequired,
+  cardAttr1: PropTypes.string.isRequired,
+  cardAttr2: PropTypes.string.isRequired,
+  cardAttr3: PropTypes.string.isRequired,
+  cardImage: PropTypes.string.isRequired,
+  cardRare: PropTypes.string.isRequired,
+  cardTrunfo: PropTypes.string.isRequired,
 };

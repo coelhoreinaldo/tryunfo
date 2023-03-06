@@ -3,10 +3,10 @@ import PropTypes from 'prop-types';
 
 export default class Form extends React.Component {
   render() {
-    const { formState, onInputChange, onSaveButtonClick } = this.props;
-    const { cardName, cardDescription, cardAttr1, cardAttr2,
+    const { onInputChange, onSaveButtonClick,
+      cardName, cardDescription, cardAttr1, cardAttr2,
       cardAttr3, cardImage, cardRare, cardTrunfo,
-      hasTrunfo, isSaveButtonDisabled } = formState;
+      hasTrunfo, isSaveButtonDisabled } = this.props;
     console.log(hasTrunfo);
     return (
       <form style={ { display: 'flex', flexDirection: 'column' } }>
@@ -99,18 +99,16 @@ export default class Form extends React.Component {
 }
 
 Form.propTypes = {
-  formState: PropTypes.shape({
-    cardName: PropTypes.string.isRequired,
-    cardDescription: PropTypes.string.isRequired,
-    cardAttr1: PropTypes.string.isRequired,
-    cardAttr2: PropTypes.string.isRequired,
-    cardAttr3: PropTypes.string.isRequired,
-    cardImage: PropTypes.string.isRequired,
-    cardRare: PropTypes.string.isRequired,
-    cardTrunfo: PropTypes.string.isRequired,
-    hasTrunfo: PropTypes.string.isRequired,
-    isSaveButtonDisabled: PropTypes.string.isRequired,
-  }).isRequired,
+  cardName: PropTypes.string.isRequired,
+  cardDescription: PropTypes.string.isRequired,
+  cardAttr1: PropTypes.string.isRequired,
+  cardAttr2: PropTypes.string.isRequired,
+  cardAttr3: PropTypes.string.isRequired,
+  cardImage: PropTypes.string.isRequired,
+  cardRare: PropTypes.string.isRequired,
+  cardTrunfo: PropTypes.string.isRequired,
+  hasTrunfo: PropTypes.string.isRequired,
+  isSaveButtonDisabled: PropTypes.string.isRequired,
   onInputChange: PropTypes.func.isRequired,
   onSaveButtonClick: PropTypes.func.isRequired,
 };
