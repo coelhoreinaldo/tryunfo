@@ -38,16 +38,21 @@ class App extends React.Component {
   }
 
   validateFields() {
-    const { cardName, cardDescription, cardImage, cardRare } = this.state;
+    const { cardName, cardDescription, cardImage, cardRare,
+      cardAttr1, cardAttr2, cardAttr3 } = this.state;
     const fields = [cardName, cardDescription, cardImage, cardRare];
     const lengthCantBe0 = fields.every((element) => element.length > 0);
 
-    // const ATTR_TOTAL_LIMIT = 210;
-    // const ATTRS_SUM = parseInt(cardAttr1, 10) + parseInt(cardAttr2, 10)
-    //    + parseInt(cardAttr3, 10);
-    // const isLess = ATTRS_SUM < ATTR_TOTAL_LIMIT;
+    const attrs = [cardAttr1, cardAttr2, cardAttr3];
+    const MAX_TOTAL = 210;
+    const ATTR_SUM = attrs.reduce((acc, curr) => Number(acc) + Number(curr), 0);
+    const sumIsLessThanMax = ATTR_SUM <= MAX_TOTAL;
 
-    if (lengthCantBe0) {
+    const MAX_ATTR = 90;
+    const lessThan90 = attrs.every((attr) => Number(attr) <= MAX_ATTR
+    && Number(attr) >= 0);
+
+    if (lengthCantBe0 && sumIsLessThanMax && lessThan90) {
       this.setState({ isSaveButtonDisabled: false });
     } else {
       this.setState({ isSaveButtonDisabled: true });
