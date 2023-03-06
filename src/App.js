@@ -13,7 +13,7 @@ class App extends React.Component {
       cardAttr2: '',
       cardAttr3: '',
       cardImage: '',
-      cardRare: '',
+      cardRare: 'normal',
       cardTrunfo: false,
       hasTrunfo: false,
       isSaveButtonDisabled: false,
@@ -26,7 +26,7 @@ class App extends React.Component {
   onInputChange({ target }) {
     const { name, value } = target;
 
-    const newValue = target.type === 'checkbox' ? 'checked' : value;
+    const newValue = target.type === 'checkbox' ? target.checked : value;
     this.setState((previousState) => ({
       ...previousState,
       [name]: newValue,
