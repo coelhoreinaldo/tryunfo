@@ -7,6 +7,7 @@ export default class Form extends React.Component {
       cardName, cardDescription, cardAttr1, cardAttr2,
       cardAttr3, cardImage, cardRare, cardTrunfo,
       hasTrunfo, isSaveButtonDisabled } = this.props;
+    console.log(hasTrunfo);
     return (
       <form style={ { display: 'flex', flexDirection: 'column' } }>
         <label>
