@@ -16,16 +16,18 @@ class App extends React.Component {
       cardRare: 'normal',
       cardTrunfo: false,
       hasTrunfo: false,
-      isSaveButtonDisabled: false,
+      isSaveButtonDisabled: true,
     };
 
     this.onInputChange = this.onInputChange.bind(this);
+    this.validateFields = this.validateFields.bind(this);
     this.onSaveButtonClick = this.onSaveButtonClick.bind(this);
   }
 
   onInputChange({ target }) {
     const { name, value } = target;
 
+    this.validateFields();
     const newValue = target.type === 'checkbox' ? target.checked : value;
     this.setState((previousState) => ({
       ...previousState,
@@ -33,8 +35,24 @@ class App extends React.Component {
     }));
   }
 
-  onSaveButtonClick() {
-    console.log(this);
+  onSaveButtonClick({ event }) {
+    event.preventDefault();
+  }
+
+  validateFields() {
+    const { cardName, cardDescription, cardAttr1, cardAttr2,
+      cardAttr3, cardImage, cardRare } = this.state;
+
+    const ATTR_TOTAL_LIMIT = 210;
+    const ATTRS_SUM = parseInt(cardAttr1, 10) + parseInt(cardAttr2, 10)
+     + parseInt(cardAttr3, 10);
+    const isGreater = ATTRS_SUM < ATTR_TOTAL_LIMIT;
+
+    if (isGreater) {
+      this.setState({ isSaveButtonDisabled: false });
+    } else {
+      this.setState({ isSaveButtonDisabled: true });
+    }
   }
 
   render() {
