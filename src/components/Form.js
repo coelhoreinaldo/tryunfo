@@ -7,7 +7,6 @@ export default class Form extends React.Component {
       cardName, cardDescription, cardAttr1, cardAttr2,
       cardAttr3, cardImage, cardRare, cardTrunfo,
       hasTrunfo, isSaveButtonDisabled } = this.props;
-    console.log(hasTrunfo);
     return (
       <form style={ { display: 'flex', flexDirection: 'column' } }>
         <label>
@@ -36,8 +35,6 @@ export default class Form extends React.Component {
             type="number"
             value={ cardAttr1 }
             onChange={ onInputChange }
-            min={ 0 }
-            max={ 90 }
             data-testid="attr1-input"
           />
         </label>
@@ -48,8 +45,6 @@ export default class Form extends React.Component {
             type="number"
             value={ cardAttr2 }
             onChange={ onInputChange }
-            min={ 0 }
-            max={ 90 }
             data-testid="attr2-input"
           />
         </label>
@@ -60,8 +55,6 @@ export default class Form extends React.Component {
             type="number"
             value={ cardAttr3 }
             onChange={ onInputChange }
-            min={ 0 }
-            max={ 90 }
             data-testid="attr3-input"
           />
         </label>
