@@ -1,6 +1,7 @@
 import React from 'react';
 import Form from './components/Form';
 import Card from './components/Card';
+import './styles/App.css';
 
 class App extends React.Component {
   constructor(props) {
@@ -139,9 +140,12 @@ class App extends React.Component {
           cardTrunfo={ cardTrunfo }
 
         />
-        <section>
+        <section className="card-list">
           {cards.map((card) => (
-            <div key={ `${card.cardName} div` }>
+            <div
+              key={ `${card.cardName} div` }
+              className="card"
+            >
               <Card
                 key={ card.cardName }
                 cardName={ card.cardName }

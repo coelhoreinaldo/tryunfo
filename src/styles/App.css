@@ -1,0 +1,17 @@
+.card-list {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 100%;
+}
+
+.card {
+  align-items: center;
+  background-color: rgba(17, 174, 253, 0.245);
+  border: 1px solid black;
+  display: flex;
+  height: 300px;
+  justify-content: center;
+  width: 300px;
+}
