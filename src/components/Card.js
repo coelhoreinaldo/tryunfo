@@ -8,12 +8,7 @@ export default class Card extends React.Component {
       cardAttr3, cardImage, cardRare, cardTrunfo } = this.props;
     return (
       <section className="card">
-        <h2
-          data-testid="name-card"
-        >
-          {cardName}
-
-        </h2>
+        <h2 data-testid="name-card">{cardName}</h2>
         <img
           src={ cardImage }
           alt={ cardName }
@@ -32,18 +27,20 @@ export default class Card extends React.Component {
           Pontos de Vida:
           {cardAttr3}
         </p>
-        <p
-          className="card-rare"
-          data-testid="rare-card"
-        >
-          {cardRare}
+        <div className="rare-trunfo-container">
+          <p
+            className="card-rare"
+            data-testid="rare-card"
+          >
+            {cardRare}
 
-        </p>
+          </p>
 
-        {
-          cardTrunfo
+          {
+            cardTrunfo
           && <p data-testid="trunfo-card" className="card-trunfo">Super Trunfo</p>
-        }
+          }
+        </div>
       </section>
     );
   }
