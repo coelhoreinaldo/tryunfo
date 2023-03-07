@@ -158,16 +158,20 @@ class App extends React.Component {
             onInputChange={ this.onInputChange }
             onSaveButtonClick={ this.onSaveButtonClick }
           />
-          <Card
-            cardName={ cardName }
-            cardDescription={ cardDescription }
-            cardAttr1={ cardAttr1 }
-            cardAttr2={ cardAttr2 }
-            cardAttr3={ cardAttr3 }
-            cardImage={ cardImage }
-            cardRare={ cardRare }
-            cardTrunfo={ cardTrunfo }
-          />
+          <div>
+            <h1>Pré-Visualização</h1>
+
+            <Card
+              cardName={ cardName }
+              cardDescription={ cardDescription }
+              cardAttr1={ cardAttr1 }
+              cardAttr2={ cardAttr2 }
+              cardAttr3={ cardAttr3 }
+              cardImage={ cardImage }
+              cardRare={ cardRare }
+              cardTrunfo={ cardTrunfo }
+            />
+          </div>
         </section>
         <FilterInputs
           handleSearchChangeByName={ this.handleSearchChangeByName }

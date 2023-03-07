@@ -19,6 +19,7 @@ export default class Form extends React.Component {
             value={ cardName }
             onChange={ onInputChange }
             data-testid="name-input"
+            maxLength={ 40 }
           />
         </label>
         <label>

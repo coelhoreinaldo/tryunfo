@@ -19,7 +19,6 @@ export default class RenderizeCardList extends React.Component {
           .map((card) => (
             <div
               key={ `${card.cardName} div` }
-              className="card"
             >
               <Card
                 key={ card.cardName }
