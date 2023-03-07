@@ -1,3 +1,13 @@
+body {
+  background-attachment: fixed;
+
+  /* Créditos: https://bgjar.com/animated-shape  */
+  background-image: url('../image/background.svg');
+  background-origin: padding-box;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
 .card-list {
   align-items: center;
   display: flex;

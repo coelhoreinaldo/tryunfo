@@ -141,7 +141,7 @@ class App extends React.Component {
       hasTrunfo, isSaveButtonDisabled, cards,
       nameSearch, rareSearch, trunfoSearch, disabledFilter } = this.state;
     return (
-      <div>
+      <main>
         <h1>Tryunfo </h1>
         <Form
           cardName={ cardName }
@@ -181,7 +181,7 @@ class App extends React.Component {
           trunfoSearch={ trunfoSearch }
           deleteCard={ this.deleteCard }
         />
-      </div>
+      </main>
     );
   }
 }
