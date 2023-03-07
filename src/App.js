@@ -131,6 +131,7 @@ class App extends React.Component {
               cardImage={ card.cardImage }
               cardRare={ card.cardRare }
               cardTrunfo={ card.cardTrunfo }
+              // rmvBtn={}
             />))
         }
       </div>
