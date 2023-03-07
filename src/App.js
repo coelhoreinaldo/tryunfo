@@ -20,6 +20,7 @@ class App extends React.Component {
       isSaveButtonDisabled: true,
       cards: [],
       nameSearch: '',
+      rareSearch: '',
     };
 
     this.onInputChange = this.onInputChange.bind(this);
@@ -29,7 +30,17 @@ class App extends React.Component {
   }
 
   handleSearchChangeByName = ({ target }) => {
-    this.setState({ nameSearch: target.value });
+    const { value } = target;
+    this.setState({ nameSearch: value });
+  };
+
+  handleSearchChangeByRare = ({ target }) => {
+    const { value } = target;
+    if (value === 'todas') {
+      this.setState({ rareSearch: '' });
+    } else {
+      this.setState({ rareSearch: value });
+    }
   };
 
   onInputChange({ target }) {
@@ -115,7 +126,7 @@ class App extends React.Component {
     const { cardName, cardDescription, cardAttr1, cardAttr2,
       cardAttr3, cardImage, cardRare, cardTrunfo,
       hasTrunfo, isSaveButtonDisabled, cards,
-      nameSearch } = this.state;
+      nameSearch, rareSearch } = this.state;
     return (
       <div>
         <h1>Tryunfo </h1>
@@ -146,13 +157,27 @@ class App extends React.Component {
         />
         <input
           type="text"
-          name="nameSearch"
           onChange={ this.handleSearchChangeByName }
           data-testid="name-filter"
           placeholder="Filtrar"
         />
+        <select
+          data-testid="rare-filter"
+          onChange={ this.handleSearchChangeByRare }
+        >
+          <option>todas</option>
+          <option>normal</option>
+          <option>raro</option>
+          <option>muito raro</option>
+        </select>
         <section className="card-list">
           {cards
+            .filter((card) => {
+              if (rareSearch === '') {
+                return card.cardRare.includes(rareSearch);
+              }
+              return card.cardRare === rareSearch;
+            })
             .filter((card) => card.cardName.includes(nameSearch))
             .map((card) => (
               <div
