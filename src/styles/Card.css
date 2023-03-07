@@ -1,6 +1,8 @@
 .card {
-  background-color: #ffd400;
-  border: 8px solid rgb(254, 254, 254);
+  background-color: #4ea5d9;
+  border: 8px solid black;
+  border-radius: 8px;
+  color: black;
   display: flex;
   flex-direction: column;
   height: 400px;
@@ -9,10 +11,24 @@
 
 .card h2 {
   align-self: flex-end;
-  background-color: #f0e100;
-  margin-bottom: auto;
-  margin-top: 0;
+  background-color: #053b7e;
+  color: aliceblue;
+  margin: 0;
   max-height: 56px;
-  max-width: 300px;
+  min-height: 28px;
+  min-width: 300px;
   overflow: hidden;
+  z-index: 0;
+}
+
+.card img {
+  height: 150px;
+  overflow: auto;
+  size: cover;
+  width: 100%;
+  z-index: 1;
+}
+
+.card p {
+  margin: 0;
 }
