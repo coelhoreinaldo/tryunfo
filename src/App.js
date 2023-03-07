@@ -42,7 +42,11 @@ class App extends React.Component {
 
   onSaveButtonClick() {
     const { cardName, cardDescription, cardImage, cardRare,
-      cardAttr1, cardAttr2, cardAttr3 } = this.state;
+      cardAttr1, cardAttr2, cardAttr3, cardTrunfo } = this.state;
+
+    if (cardTrunfo) {
+      this.setState({ hasTrunfo: true });
+    }
 
     const newCard = {
       cardName,

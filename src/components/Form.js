@@ -85,13 +85,13 @@ export default class Form extends React.Component {
         </label>
         <label>
           Super Trunfo
-          <input
+          { hasTrunfo ? <p>Você já tem um Super Trunfo em seu baralho </p> : <input
             name="cardTrunfo"
             type="checkbox"
             checked={ cardTrunfo }
             onChange={ onInputChange }
             data-testid="trunfo-input"
-          />
+          /> }
         </label>
         <button
           type="button"
