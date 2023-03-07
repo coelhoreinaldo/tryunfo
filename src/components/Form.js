@@ -10,6 +10,7 @@ export default class Form extends React.Component {
       hasTrunfo, isSaveButtonDisabled } = this.props;
     return (
       <form>
+        <h1>Adicione uma carta</h1>
         <label>
           Nome da Carta
           <input
@@ -27,6 +28,8 @@ export default class Form extends React.Component {
             value={ cardDescription }
             onChange={ onInputChange }
             data-testid="description-input"
+            maxLength={ 70 }
+            rows={ 5 }
           />
         </label>
         <label>
@@ -83,24 +86,30 @@ export default class Form extends React.Component {
             <option>muito raro</option>
           </select>
         </label>
-        <label>
-          Super Trunfo
-          { hasTrunfo ? <span> Você já tem um Super Trunfo em seu baralho </span> : <input
-            name="cardTrunfo"
-            type="checkbox"
-            checked={ cardTrunfo }
-            onChange={ onInputChange }
-            data-testid="trunfo-input"
-          /> }
-        </label>
-        <button
-          type="button"
-          disabled={ isSaveButtonDisabled }
-          onClick={ onSaveButtonClick }
-          data-testid="save-button"
-        >
-          Salvar
-        </button>
+        <div className="button-trunfo-container">
+          <label className="super-trunfo-input">
+            Super Trunfo
+            { hasTrunfo
+              ? <span> Você já tem um Super Trunfo em seu baralho </span>
+              : (
+                <input
+                  name="cardTrunfo"
+                  type="checkbox"
+                  checked={ cardTrunfo }
+                  onChange={ onInputChange }
+                  data-testid="trunfo-input"
+                />
+              ) }
+          </label>
+          <button
+            type="button"
+            disabled={ isSaveButtonDisabled }
+            onClick={ onSaveButtonClick }
+            data-testid="save-button"
+          >
+            Salvar
+          </button>
+        </div>
       </form>
     );
   }

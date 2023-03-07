@@ -43,6 +43,7 @@ main {
   display: flex;
   gap: 16px;
   height: 500px;
+  justify-content: space-around;
   padding: 16px;
   width: 50%;
 }
