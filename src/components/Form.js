@@ -85,7 +85,7 @@ export default class Form extends React.Component {
         </label>
         <label>
           Super Trunfo
-          { hasTrunfo ? <p>Você já tem um Super Trunfo em seu baralho </p> : <input
+          { hasTrunfo ? <span>Você já tem um Super Trunfo em seu baralho </span> : <input
             name="cardTrunfo"
             type="checkbox"
             checked={ cardTrunfo }
