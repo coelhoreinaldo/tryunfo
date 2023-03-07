@@ -73,6 +73,10 @@ class App extends React.Component {
     const { cards } = this.state;
     const cardToBeDeleted = cards
       .find((card) => card.cardName === event.target.className);
+    if (cardToBeDeleted.cardTrunfo) {
+      this.setState({ hasTrunfo: false });
+    }
+    console.log(cardToBeDeleted);
     const newCards = cards;
     newCards.splice(cards.indexOf(cardToBeDeleted));
     this.setState((...previousState) => ({
@@ -135,8 +139,8 @@ class App extends React.Component {
           cardTrunfo={ cardTrunfo }
 
         />
-        {
-          cards.map((card) => (
+        <section>
+          {cards.map((card) => (
             <div key={ `${card.cardName} div` }>
               <Card
                 key={ card.cardName }
@@ -157,8 +161,8 @@ class App extends React.Component {
               >
                 Excluir
               </button>
-            </div>))
-        }
+            </div>))}
+        </section>
       </div>
     );
   }
