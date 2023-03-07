@@ -2,6 +2,7 @@ import React from 'react';
 import Form from './components/Form';
 import Card from './components/Card';
 import './styles/App.css';
+import RenderizeCardList from './components/RenderizeCardList';
 
 class App extends React.Component {
   constructor(props) {
@@ -191,42 +192,13 @@ class App extends React.Component {
             data-testid="trunfo-filter"
           />
         </label>
-        <section className="card-list">
-          {cards
-            .filter((card) => (trunfoSearch ? card.cardTrunfo === trunfoSearch : card))
-            .filter((card) => {
-              if (rareSearch === '') {
-                return card.cardRare.includes(rareSearch);
-              }
-              return card.cardRare === rareSearch;
-            })
-            .filter((card) => card.cardName.includes(nameSearch))
-            .map((card) => (
-              <div
-                key={ `${card.cardName} div` }
-                className="card"
-              >
-                <Card
-                  key={ card.cardName }
-                  cardName={ card.cardName }
-                  cardDescription={ card.cardDescription }
-                  cardAttr1={ card.cardAttr1 }
-                  cardAttr2={ card.cardAttr2 }
-                  cardAttr3={ card.cardAttr3 }
-                  cardImage={ card.cardImage }
-                  cardRare={ card.cardRare }
-                  cardTrunfo={ card.cardTrunfo }
-                />
-                <button
-                  data-testid="delete-button"
-                  type="button"
-                  className={ card.cardName }
-                  onClick={ this.deleteCard }
-                >
-                  Excluir
-                </button>
-              </div>))}
-        </section>
+        <RenderizeCardList
+          cards={ cards }
+          nameSearch={ nameSearch }
+          rareSearch={ rareSearch }
+          trunfoSearch={ trunfoSearch }
+          deleteCard={ this.deleteCard }
+        />
       </div>
     );
   }
