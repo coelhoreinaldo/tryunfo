@@ -167,23 +167,27 @@ class App extends React.Component {
           cardTrunfo={ cardTrunfo }
 
         />
-        <input
-          type="text"
-          onChange={ this.handleSearchChangeByName }
-          data-testid="name-filter"
-          placeholder="Filtrar"
-          disabled={ disabledFilter }
-        />
-        <select
-          data-testid="rare-filter"
-          onChange={ this.handleSearchChangeByRare }
-          disabled={ disabledFilter }
-        >
-          <option>todas</option>
-          <option>normal</option>
-          <option>raro</option>
-          <option>muito raro</option>
-        </select>
+        <label>
+          <input
+            type="text"
+            onChange={ this.handleSearchChangeByName }
+            data-testid="name-filter"
+            placeholder="Filtrar"
+            disabled={ disabledFilter }
+          />
+        </label>
+        <label>
+          <select
+            data-testid="rare-filter"
+            onChange={ this.handleSearchChangeByRare }
+            disabled={ disabledFilter }
+          >
+            <option>todas</option>
+            <option>normal</option>
+            <option>raro</option>
+            <option>muito raro</option>
+          </select>
+        </label>
         <label>
           Super Trunfo
           <input
