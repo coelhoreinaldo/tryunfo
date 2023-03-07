@@ -25,12 +25,6 @@ class App extends React.Component {
     this.onSaveButtonClick = this.onSaveButtonClick.bind(this);
   }
 
-  // handleValidate = () => {
-  //   const { cards } = this.state;
-  //   const includesTrunfo = cards.map((card) => card.)
-  //   cardTrunfo ? this.setState({ hasTrunfo: true}) : this.setState({ hasTrunfo:false })
-  // };
-
   onInputChange({ target }) {
     const { name, value } = target;
 
