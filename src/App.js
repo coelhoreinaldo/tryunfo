@@ -3,6 +3,7 @@ import Form from './components/Form';
 import Card from './components/Card';
 import './styles/App.css';
 import RenderizeCardList from './components/RenderizeCardList';
+import FilterInputs from './components/FilterInputs';
 
 class App extends React.Component {
   constructor(props) {
@@ -167,35 +168,12 @@ class App extends React.Component {
           cardTrunfo={ cardTrunfo }
 
         />
-        <label>
-          <input
-            type="text"
-            onChange={ this.handleSearchChangeByName }
-            data-testid="name-filter"
-            placeholder="Filtrar"
-            disabled={ disabledFilter }
-          />
-        </label>
-        <label>
-          <select
-            data-testid="rare-filter"
-            onChange={ this.handleSearchChangeByRare }
-            disabled={ disabledFilter }
-          >
-            <option>todas</option>
-            <option>normal</option>
-            <option>raro</option>
-            <option>muito raro</option>
-          </select>
-        </label>
-        <label>
-          Super Trunfo
-          <input
-            type="checkbox"
-            onChange={ this.handleSearchChangeByTrunfo }
-            data-testid="trunfo-filter"
-          />
-        </label>
+        <FilterInputs
+          handleSearchChangeByName={ this.handleSearchChangeByName }
+          handleSearchChangeByRare={ this.handleSearchChangeByRare }
+          handleSearchChangeByTrunfo={ this.handleSearchChangeByTrunfo }
+          disabledFilter={ disabledFilter }
+        />
         <RenderizeCardList
           cards={ cards }
           nameSearch={ nameSearch }
