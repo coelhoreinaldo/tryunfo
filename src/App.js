@@ -77,9 +77,7 @@ class App extends React.Component {
     if (cardToBeDeleted.cardTrunfo) {
       this.setState({ hasTrunfo: false });
     }
-    console.log(cardToBeDeleted);
-    const newCards = cards;
-    newCards.splice(cards.indexOf(cardToBeDeleted));
+    const newCards = cards.filter((card) => card !== cardToBeDeleted);
     this.setState((...previousState) => ({
       ...previousState,
       cards: newCards,
