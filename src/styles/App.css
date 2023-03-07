@@ -2,7 +2,7 @@ body {
   background-attachment: fixed;
 
   /* Créditos: https://bgjar.com/animated-shape  */
-  background-image: url('../image/background.svg');
+  background-image: url('../images/background.svg');
   background-origin: padding-box;
   background-repeat: no-repeat;
   background-size: cover;
@@ -33,4 +33,16 @@ main {
   display: flex;
   flex-direction: column;
   justify-content: center;
+}
+
+.form-container {
+  background-color: aliceblue;
+  border-radius: 16px;
+  box-shadow: 3px 3px black;
+  color: #053b7e;
+  display: flex;
+  gap: 16px;
+  height: 500px;
+  padding: 16px;
+  width: 50%;
 }

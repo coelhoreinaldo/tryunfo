@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import '../styles/Form.css';
 
 export default class Form extends React.Component {
   render() {
@@ -8,7 +9,7 @@ export default class Form extends React.Component {
       cardAttr3, cardImage, cardRare, cardTrunfo,
       hasTrunfo, isSaveButtonDisabled } = this.props;
     return (
-      <form style={ { display: 'flex', flexDirection: 'column' } }>
+      <form>
         <label>
           Nome da Carta
           <input
