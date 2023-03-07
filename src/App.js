@@ -21,6 +21,8 @@ class App extends React.Component {
       cards: [],
       nameSearch: '',
       rareSearch: '',
+      trunfoSearch: false,
+      disabledFilter: false,
     };
 
     this.onInputChange = this.onInputChange.bind(this);
@@ -40,6 +42,15 @@ class App extends React.Component {
       this.setState({ rareSearch: '' });
     } else {
       this.setState({ rareSearch: value });
+    }
+  };
+
+  handleSearchChangeByTrunfo = ({ target }) => {
+    const value = target.type === 'checkbox' ? target.checked : target.value;
+    if (value) {
+      this.setState({ trunfoSearch: true, disabledFilter: true });
+    } else {
+      this.setState({ trunfoSearch: false, disabledFilter: false });
     }
   };
 
@@ -126,7 +137,7 @@ class App extends React.Component {
     const { cardName, cardDescription, cardAttr1, cardAttr2,
       cardAttr3, cardImage, cardRare, cardTrunfo,
       hasTrunfo, isSaveButtonDisabled, cards,
-      nameSearch, rareSearch } = this.state;
+      nameSearch, rareSearch, trunfoSearch, disabledFilter } = this.state;
     return (
       <div>
         <h1>Tryunfo </h1>
@@ -160,17 +171,29 @@ class App extends React.Component {
           onChange={ this.handleSearchChangeByName }
           data-testid="name-filter"
           placeholder="Filtrar"
+          disabled={ disabledFilter }
         />
         <select
           data-testid="rare-filter"
           onChange={ this.handleSearchChangeByRare }
+          disabled={ disabledFilter }
         >
           <option>todas</option>
           <option>normal</option>
           <option>raro</option>
           <option>muito raro</option>
         </select>
+        <label>
+          Super Trunfo
+          <input
+            type="checkbox"
+            onChange={ this.handleSearchChangeByTrunfo }
+            data-testid="trunfo-filter"
+          />
+        </label>
         <section className="card-list">
+          {trunfoSearch && cards
+            .find((card) => (card.cardTrunfo === trunfoSearch))}
           {cards
             .filter((card) => {
               if (rareSearch === '') {
