@@ -6,7 +6,7 @@ body {
   background-origin: padding-box;
   background-repeat: no-repeat;
   background-size: cover;
-  color: white;
+  color: black(42, 42, 42);
 
 }
 

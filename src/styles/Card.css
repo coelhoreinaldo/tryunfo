@@ -1,34 +1,40 @@
 .card {
   background-color: #4ea5d9;
-  border: 8px solid black;
-  border-radius: 8px;
-  color: black;
+  border: 5px solid black;
+  border-radius: 5px;
   display: flex;
   flex-direction: column;
   height: 400px;
   width: 300px;
 }
 
-.card h2 {
-  align-self: flex-end;
-  background-color: #053b7e;
-  color: aliceblue;
-  margin: 0;
-  max-height: 56px;
-  min-height: 28px;
-  min-width: 300px;
-  overflow: hidden;
-  z-index: 0;
-}
 
 .card img {
-  height: 150px;
-  overflow: auto;
-  size: cover;
+  border-bottom: 5px solid black;
+  border-top: 5px solid black;
+  height: 180px;
+  object-fit: cover;
   width: 100%;
-  z-index: 1;
 }
 
-.card p {
-  margin: 0;
+.card p, h2 {
+  margin: 4px 0;
+  padding: 0 10px;
+  word-wrap: break-word;
 }
+
+.card h2 {
+  background-color: #053b7e;
+  color: white;
+  margin: 0;
+  word-wrap: break-word;
+}
+
+
+.card .card-rare {
+  background-color: #053b7e;
+  color: white;
+  margin-top: auto;
+  place-self: flex-end;
+}
+
