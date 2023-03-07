@@ -19,6 +19,7 @@ class App extends React.Component {
       hasTrunfo: false,
       isSaveButtonDisabled: true,
       cards: [],
+      nameSearch: '',
     };
 
     this.onInputChange = this.onInputChange.bind(this);
@@ -26,6 +27,10 @@ class App extends React.Component {
     this.validateFields = this.validateFields.bind(this);
     this.deleteCard = this.deleteCard.bind(this);
   }
+
+  handleSearchChangeByName = ({ target }) => {
+    this.setState({ nameSearch: target.value });
+  };
 
   onInputChange({ target }) {
     const { name, value } = target;
@@ -69,21 +74,6 @@ class App extends React.Component {
     }));
   }
 
-  deleteCard(event) {
-    event.preventDefault();
-    const { cards } = this.state;
-    const cardToBeDeleted = cards
-      .find((card) => card.cardName === event.target.className);
-    if (cardToBeDeleted.cardTrunfo) {
-      this.setState({ hasTrunfo: false });
-    }
-    const newCards = cards.filter((card) => card !== cardToBeDeleted);
-    this.setState((...previousState) => ({
-      ...previousState,
-      cards: newCards,
-    }));
-  }
-
   validateFields() {
     const { cardName, cardDescription, cardImage, cardRare,
       cardAttr1, cardAttr2, cardAttr3 } = this.state;
@@ -106,10 +96,26 @@ class App extends React.Component {
     }
   }
 
+  deleteCard(event) {
+    event.preventDefault();
+    const { cards } = this.state;
+    const cardToBeDeleted = cards
+      .find((card) => card.cardName === event.target.className);
+    if (cardToBeDeleted.cardTrunfo) {
+      this.setState({ hasTrunfo: false });
+    }
+    const newCards = cards.filter((card) => card !== cardToBeDeleted);
+    this.setState((...previousState) => ({
+      ...previousState,
+      cards: newCards,
+    }));
+  }
+
   render() {
     const { cardName, cardDescription, cardAttr1, cardAttr2,
       cardAttr3, cardImage, cardRare, cardTrunfo,
-      hasTrunfo, isSaveButtonDisabled, cards } = this.state;
+      hasTrunfo, isSaveButtonDisabled, cards,
+      nameSearch } = this.state;
     return (
       <div>
         <h1>Tryunfo </h1>
@@ -138,32 +144,41 @@ class App extends React.Component {
           cardTrunfo={ cardTrunfo }
 
         />
+        <input
+          type="text"
+          name="nameSearch"
+          onChange={ this.handleSearchChangeByName }
+          data-testid="name-filter"
+          placeholder="Filtrar"
+        />
         <section className="card-list">
-          {cards.map((card) => (
-            <div
-              key={ `${card.cardName} div` }
-              className="card"
-            >
-              <Card
-                key={ card.cardName }
-                cardName={ card.cardName }
-                cardDescription={ card.cardDescription }
-                cardAttr1={ card.cardAttr1 }
-                cardAttr2={ card.cardAttr2 }
-                cardAttr3={ card.cardAttr3 }
-                cardImage={ card.cardImage }
-                cardRare={ card.cardRare }
-                cardTrunfo={ card.cardTrunfo }
-              />
-              <button
-                data-testid="delete-button"
-                type="button"
-                className={ card.cardName }
-                onClick={ this.deleteCard }
+          {cards
+            .filter((card) => card.cardName.includes(nameSearch))
+            .map((card) => (
+              <div
+                key={ `${card.cardName} div` }
+                className="card"
               >
-                Excluir
-              </button>
-            </div>))}
+                <Card
+                  key={ card.cardName }
+                  cardName={ card.cardName }
+                  cardDescription={ card.cardDescription }
+                  cardAttr1={ card.cardAttr1 }
+                  cardAttr2={ card.cardAttr2 }
+                  cardAttr3={ card.cardAttr3 }
+                  cardImage={ card.cardImage }
+                  cardRare={ card.cardRare }
+                  cardTrunfo={ card.cardTrunfo }
+                />
+                <button
+                  data-testid="delete-button"
+                  type="button"
+                  className={ card.cardName }
+                  onClick={ this.deleteCard }
+                >
+                  Excluir
+                </button>
+              </div>))}
         </section>
       </div>
     );
