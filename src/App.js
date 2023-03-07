@@ -192,9 +192,8 @@ class App extends React.Component {
           />
         </label>
         <section className="card-list">
-          {trunfoSearch && cards
-            .find((card) => (card.cardTrunfo === trunfoSearch))}
           {cards
+            .filter((card) => (trunfoSearch ? card.cardTrunfo === trunfoSearch : card))
             .filter((card) => {
               if (rareSearch === '') {
                 return card.cardRare.includes(rareSearch);
