@@ -6,6 +6,8 @@ body {
   background-origin: padding-box;
   background-repeat: no-repeat;
   background-size: cover;
+  color: white;
+
 }
 
 .card-list {
@@ -24,4 +26,11 @@ body {
   height: 300px;
   justify-content: center;
   width: 300px;
+}
+
+main {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
