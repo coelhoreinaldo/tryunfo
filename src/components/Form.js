@@ -15,6 +15,7 @@ export default class Form extends React.Component {
           Nome
           <input
             name="cardName"
+            className="card-name"
             type="text"
             value={ cardName }
             onChange={ onInputChange }
@@ -26,6 +27,7 @@ export default class Form extends React.Component {
           Descrição
           <textarea
             name="cardDescription"
+            className="card-description"
             value={ cardDescription }
             onChange={ onInputChange }
             data-testid="description-input"
@@ -34,7 +36,7 @@ export default class Form extends React.Component {
           />
         </label>
         <div className="attr-container">
-          <label className="attr">
+          <label className="inline">
             Ataque
             <input
               name="cardAttr1"
@@ -45,7 +47,7 @@ export default class Form extends React.Component {
               max={ 90 }
             />
           </label>
-          <label className="attr">
+          <label className="inline">
             Defesa
             <input
               name="cardAttr2"
@@ -56,7 +58,7 @@ export default class Form extends React.Component {
               max={ 90 }
             />
           </label>
-          <label className="attr">
+          <label className="inline">
             Pontos de Vida
             <input
               name="cardAttr3"
@@ -68,7 +70,7 @@ export default class Form extends React.Component {
             />
           </label>
         </div>
-        <label>
+        <label className="inline">
           Imagem
           <input
             name="cardImage"
@@ -76,6 +78,7 @@ export default class Form extends React.Component {
             value={ cardImage }
             onChange={ onInputChange }
             data-testid="image-input"
+            className="card-image-input"
           />
         </label>
         <label>

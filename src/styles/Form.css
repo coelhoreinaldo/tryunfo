@@ -19,7 +19,7 @@ label {
   justify-content: space-between;
 }
 
-.form input[ type = 'text' ], textarea {
+.card-name, .card-description {
   border: none;
   border-bottom: 2px solid gray;
 }
@@ -39,17 +39,30 @@ label {
   gap: 8px;
 }
 
-.attr {
+.inline {
   display: flex;
   flex-direction: row;
 }
 
-.attr input {
+.inline input {
   background-color: rgb(151, 207, 255);
   border: 1px solid gray;
-  border-radius: 8px;
+  height: 24px;
   max-width: 140px;
   text-align: justify;
+}
+
+.card-image-input {
+  background-attachment: local;
+  background-color: white;
+  background-image: url('../images/imgIcon.svg');
+  background-position: right;
+  background-repeat: no-repeat;
+  background-size: contain;
+  border-top: 1px solid black;
+  padding-right: 36px;
+  width: 108px;
+  word-wrap: break-word;
 }
 
 .form button {
