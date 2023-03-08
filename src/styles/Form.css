@@ -1,8 +1,9 @@
 /* stylelint-disable selector-no-qualifying-type */
-form {
+.form {
   color: black;
   display: flex;
   flex-direction: column;
+  gap: 16px;
   height: 450px;
   width: 40%;
 }
@@ -18,17 +19,40 @@ label {
   justify-content: space-between;
 }
 
-input[ type = 'text' ], textarea {
+.form input[ type = 'text' ], textarea {
   border: none;
   border-bottom: 2px solid gray;
 }
 
-input, textarea {
+.form input, textarea {
   background-color: aliceblue;
   margin-bottom: 4px;
 }
 
-button {
+.form textarea {
+  resize: none;
+}
+
+.attr-container {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.attr {
+  display: flex;
+  flex-direction: row;
+}
+
+.attr input {
+  background-color: rgb(151, 207, 255);
+  border: 1px solid gray;
+  border-radius: 8px;
+  max-width: 140px;
+  text-align: justify;
+}
+
+.form button {
   height: 40px;
   width: 160px;
 }

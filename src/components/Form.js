@@ -9,7 +9,7 @@ export default class Form extends React.Component {
       cardAttr3, cardImage, cardRare, cardTrunfo,
       hasTrunfo, isSaveButtonDisabled } = this.props;
     return (
-      <form>
+      <form className="form">
         <h1>Adicione uma carta</h1>
         <label>
           Nome
@@ -30,39 +30,44 @@ export default class Form extends React.Component {
             onChange={ onInputChange }
             data-testid="description-input"
             maxLength={ 70 }
-            rows={ 5 }
+            rows={ 2 }
           />
         </label>
-        <label>
-          Atributo 1
-          <input
-            name="cardAttr1"
-            type="number"
-            value={ cardAttr1 }
-            onChange={ onInputChange }
-            data-testid="attr1-input"
-          />
-        </label>
-        <label>
-          Atributo 2
-          <input
-            name="cardAttr2"
-            type="number"
-            value={ cardAttr2 }
-            onChange={ onInputChange }
-            data-testid="attr2-input"
-          />
-        </label>
-        <label>
-          Atributo 3
-          <input
-            name="cardAttr3"
-            type="number"
-            value={ cardAttr3 }
-            onChange={ onInputChange }
-            data-testid="attr3-input"
-          />
-        </label>
+        <div className="attr-container">
+          <label className="attr">
+            Ataque
+            <input
+              name="cardAttr1"
+              type="number"
+              value={ cardAttr1 }
+              onChange={ onInputChange }
+              data-testid="attr1-input"
+              max={ 90 }
+            />
+          </label>
+          <label className="attr">
+            Defesa
+            <input
+              name="cardAttr2"
+              type="number"
+              value={ cardAttr2 }
+              onChange={ onInputChange }
+              data-testid="attr2-input"
+              max={ 90 }
+            />
+          </label>
+          <label className="attr">
+            Pontos de Vida
+            <input
+              name="cardAttr3"
+              type="number"
+              value={ cardAttr3 }
+              onChange={ onInputChange }
+              data-testid="attr3-input"
+              max={ 90 }
+            />
+          </label>
+        </div>
         <label>
           Imagem
           <input
