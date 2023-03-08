@@ -12,7 +12,7 @@
 
 
 .card img {
-  height: 172px;
+  height: 200px;
   object-fit: cover;
   width: 100%;
 }
@@ -24,16 +24,17 @@
 }
 
 .card h2 {
-  background-color: var(--primary-color);
-  border-radius: 9px;
+  background-color: var(--secondary-color);
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
   color: white;
   margin: 0;
+  text-align: right;
   word-wrap: break-word;
 }
 
 .card .description-card {
-  background-color: white;
-  color: black;
+  color: white;
   font-size: 14px;
   margin-top: 0;
   padding: 5px;
