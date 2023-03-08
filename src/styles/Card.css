@@ -43,17 +43,19 @@
 
 .card .card-attrs-container {
   align-items: center;
+  background-color: aliceblue;
   display: flex;
   flex-direction: column;
   gap: 4px;
   justify-content: center;
   margin: auto 0;
+  padding: 16px 0;
 }
 
 .card .card-attr {
   align-items: center;
-  background-color: aliceblue;
-  border: 1px solid aliceblue;
+  background-color: rgb(204, 227, 247);
+  border: 1px solid rgb(204, 227, 247);
   border-radius: 9px;
   display: flex;
   justify-content: space-between;
@@ -61,13 +63,14 @@
 }
 
 .card .card-attr p {
-  color: aliceblue;
+  color: black;
   margin: 0;
 }
 
 .card .card-attr span {
   background-color: var(--primary-color);
-  border-radius: 9px;
+  border-bottom-right-radius: 9px;
+  border-top-right-radius: 9px;
   color: aliceblue;
   min-width: 30px;
   text-align: center;
@@ -83,14 +86,10 @@
 
 .card .card-trunfo {
   background-color: var(--primary-color);
-  border-left: 4px solid aliceblue;
-  border-top: 4px solid aliceblue;
   margin-bottom: 0;
 }
 
 .card .card-rare {
   background-color: var(--primary-color);
-  border-right: 4px solid aliceblue;
-  border-top: 4px solid aliceblue;
   margin-bottom: 0;
 }
