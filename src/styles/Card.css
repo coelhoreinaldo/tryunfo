@@ -1,6 +1,6 @@
 .card {
   background-color: var(--primary-color);
-  border: 5px solid white;
+  border: 5px solid aliceblue;
   border-radius: 9px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2) , 0 8px 20px 0 rgba(0, 0, 0, 0.2);
   display: flex;
@@ -27,14 +27,14 @@
   background-color: var(--secondary-color);
   border-top-left-radius: 8px;
   border-top-right-radius: 8px;
-  color: white;
+  color: aliceblue;
   margin: 0;
   text-align: right;
   word-wrap: break-word;
 }
 
 .card .description-card {
-  color: white;
+  color: aliceblue;
   font-size: 14px;
   margin-top: 0;
   padding: 5px;
@@ -50,32 +50,32 @@
   margin: auto 0;
 }
 
-.card .card-attr-container {
+.card .card-attr {
   align-items: center;
-  background-color: white;
-  border: 1px solid white;
+  background-color: aliceblue;
+  border: 1px solid aliceblue;
   border-radius: 9px;
   display: flex;
   justify-content: space-between;
   width: 60%;
 }
 
-.card .card-attr-container p {
+.card .card-attr p {
   color: aliceblue;
   margin: 0;
 }
 
-.card .card-attr-container span {
+.card .card-attr span {
   background-color: var(--primary-color);
   border-radius: 9px;
-  color: white;
+  color: aliceblue;
   min-width: 30px;
   text-align: center;
 }
 
 
 .card .rare-trunfo-container {
-  color: white;
+  color: aliceblue;
   display: flex;
   justify-content: space-between;
   margin-top: auto;
@@ -83,14 +83,14 @@
 
 .card .card-trunfo {
   background-color: var(--primary-color);
-  border-left: 4px solid white;
-  border-top: 4px solid white;
+  border-left: 4px solid aliceblue;
+  border-top: 4px solid aliceblue;
   margin-bottom: 0;
 }
 
 .card .card-rare {
   background-color: var(--primary-color);
-  border-right: 4px solid white;
-  border-top: 4px solid white;
+  border-right: 4px solid aliceblue;
+  border-top: 4px solid aliceblue;
   margin-bottom: 0;
 }
