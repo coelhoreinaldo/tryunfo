@@ -20,7 +20,7 @@ export default class Form extends React.Component {
             value={ cardName }
             onChange={ onInputChange }
             data-testid="name-input"
-            maxLength={ 40 }
+            maxLength={ 36 }
           />
         </label>
         <label>
@@ -31,7 +31,7 @@ export default class Form extends React.Component {
             value={ cardDescription }
             onChange={ onInputChange }
             data-testid="description-input"
-            maxLength={ 70 }
+            maxLength={ 60 }
             rows={ 2 }
           />
         </label>
@@ -59,7 +59,7 @@ export default class Form extends React.Component {
             />
           </label>
           <label className="inline">
-            Pontos de Vida
+            Vida
             <input
               name="cardAttr3"
               type="number"

@@ -24,19 +24,19 @@ export default class Card extends React.Component {
         <div className="card-attrs-container">
           <section className="card-attr">
             <p data-testid="attr1-card">
-              Ataque:
+              Ataque
             </p>
             <span>{cardAttr1}</span>
           </section>
           <section className="card-attr">
             <p data-testid="attr2-card">
-              Defesa:
+              Defesa
             </p>
             <span>{cardAttr2}</span>
           </section>
           <section className="card-attr">
             <p data-testid="attr3-card">
-              Pontos de Vida:
+              Vida
             </p>
             <span>{cardAttr3}</span>
           </section>

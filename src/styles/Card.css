@@ -13,7 +13,7 @@
 
 
 .card img {
-  height: 200px;
+  height: 170px;
   object-fit: cover;
   width: 100%;
 }
@@ -29,9 +29,10 @@
   border-top-left-radius: 8px;
   border-top-right-radius: 8px;
   color: aliceblue;
-  height: 26px;
-  line-height: 26px;
+  line-height: 1;
   margin: 0;
+  max-height: 13%;
+  position: relative;
   text-align: right;
 }
 
@@ -39,6 +40,7 @@
   color: aliceblue;
   font-size: 14px;
   margin-top: 0;
+  max-height: 13%;
   padding: 5px;
   text-align: justify;
 }
@@ -49,8 +51,9 @@
   display: flex;
   flex-direction: column;
   gap: 4px;
+  height: 16%;
   justify-content: center;
-  margin: auto 0;
+  margin: 0;
   padding: 16px 0;
 }
 
@@ -84,10 +87,12 @@
   display: flex;
   justify-content: space-between;
   margin-top: auto;
+  width: 100%;
 }
 
 .card .card-trunfo {
   background-color: var(--primary-color);
+  justify-self: flex-end;
   margin-bottom: 0;
 }
 
