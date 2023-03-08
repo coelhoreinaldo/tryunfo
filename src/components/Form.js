@@ -12,7 +12,7 @@ export default class Form extends React.Component {
       <form>
         <h1>Adicione uma carta</h1>
         <label>
-          Nome da Carta
+          Nome
           <input
             name="cardName"
             type="text"
@@ -23,7 +23,7 @@ export default class Form extends React.Component {
           />
         </label>
         <label>
-          Descrição da Carta
+          Descrição
           <textarea
             name="cardDescription"
             value={ cardDescription }
