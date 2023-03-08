@@ -2,6 +2,7 @@ import React from 'react';
 import Form from './components/Form';
 import Card from './components/Card';
 import './styles/App.css';
+import './styles/variables.css';
 import RenderizeCardList from './components/RenderizeCardList';
 import FilterInputs from './components/FilterInputs';
 import logo from './images/logo.svg';

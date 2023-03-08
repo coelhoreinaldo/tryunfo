@@ -21,18 +21,26 @@ export default class Card extends React.Component {
           {cardDescription}
 
         </p>
-        <p data-testid="attr1-card">
-          Ataque:
-          <span>{cardAttr1}</span>
-        </p>
-        <p data-testid="attr2-card">
-          Defesa:
-          <span>{cardAttr2}</span>
-        </p>
-        <p data-testid="attr3-card">
-          Pontos de Vida:
-          <span>{cardAttr3}</span>
-        </p>
+        <div className="card-attrs-container">
+          <section className="card-attr-container">
+            <p data-testid="attr1-card">
+              Ataque:
+            </p>
+            <span>{cardAttr1}</span>
+          </section>
+          <section className="card-attr-container">
+            <p data-testid="attr2-card">
+              Defesa:
+            </p>
+            <span>{cardAttr2}</span>
+          </section>
+          <section className="card-attr-container">
+            <p data-testid="attr3-card">
+              Pontos de Vida:
+            </p>
+            <span>{cardAttr3}</span>
+          </section>
+        </div>
         <div className="rare-trunfo-container">
           <p
             className="card-rare"
@@ -44,7 +52,7 @@ export default class Card extends React.Component {
 
           {
             cardTrunfo
-          && <p data-testid="trunfo-card" className="card-trunfo">Super Trunfo</p>
+            && <p data-testid="trunfo-card" className="card-trunfo">Super Trunfo</p>
           }
         </div>
       </section>

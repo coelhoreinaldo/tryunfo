@@ -1,17 +1,17 @@
 .card {
-  background-color: #4ea5d9;
-  border: 5px solid black;
-  border-radius: 5px;
+  background-color: var(--primary-color);
+  border: 5px solid white;
+  border-radius: 9px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2) , 0 8px 20px 0 rgba(0, 0, 0, 0.2);
   display: flex;
   flex-direction: column;
-  height: 400px;
-  width: 300px;
+  height: 384px;
+  padding: 8px;
+  width: 284px;
 }
 
 
 .card img {
-  border-bottom: 5px solid black;
-  border-top: 5px solid black;
   height: 172px;
   object-fit: cover;
   width: 100%;
@@ -24,20 +24,54 @@
 }
 
 .card h2 {
-  background-color: #053b7e;
+  background-color: var(--primary-color);
+  border-radius: 9px;
   color: white;
   margin: 0;
   word-wrap: break-word;
 }
 
 .card .description-card {
-  background-color: #053b7e;
-  color: white;
+  background-color: white;
+  color: black;
   font-size: 14px;
   margin-top: 0;
   padding: 5px;
   text-align: justify;
 }
+
+.card .card-attrs-container {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  justify-content: center;
+  margin: auto 0;
+}
+
+.card .card-attr-container {
+  align-items: center;
+  background-color: white;
+  border: 1px solid white;
+  border-radius: 9px;
+  display: flex;
+  justify-content: space-between;
+  width: 60%;
+}
+
+.card .card-attr-container p {
+  color: aliceblue;
+  margin: 0;
+}
+
+.card .card-attr-container span {
+  background-color: var(--primary-color);
+  border-radius: 9px;
+  color: white;
+  min-width: 30px;
+  text-align: center;
+}
+
 
 .card .rare-trunfo-container {
   color: white;
@@ -47,15 +81,15 @@
 }
 
 .card .card-trunfo {
-  background-color: #053b7e;
-  border-left: 4px solid black;
-  border-top: 4px solid black;
+  background-color: var(--primary-color);
+  border-left: 4px solid white;
+  border-top: 4px solid white;
   margin-bottom: 0;
 }
 
 .card .card-rare {
-  background-color: #053b7e;
-  border-right: 4px solid black;
-  border-top: 4px solid black;
+  background-color: var(--primary-color);
+  border-right: 4px solid white;
+  border-top: 4px solid white;
   margin-bottom: 0;
 }
