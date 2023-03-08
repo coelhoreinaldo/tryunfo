@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import '../styles/FilterInputs.css';
 
 export default class FilterInputs extends React.Component {
   render() {
@@ -8,7 +9,8 @@ export default class FilterInputs extends React.Component {
       handleSearchChangeByRare,
       handleSearchChangeByTrunfo } = this.props;
     return (
-      <section>
+      <section className="filter-inputs">
+        <h3> Filtros de Busca</h3>
         <label>
           <input
             type="text"
@@ -30,7 +32,7 @@ export default class FilterInputs extends React.Component {
             <option>muito raro</option>
           </select>
         </label>
-        <label>
+        <label className="super-trunfo">
           Super Trunfo
           <input
             type="checkbox"
