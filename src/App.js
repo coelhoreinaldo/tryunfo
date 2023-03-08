@@ -2,8 +2,10 @@ import React from 'react';
 import Form from './components/Form';
 import Card from './components/Card';
 import './styles/App.css';
+import './styles/variables.css';
 import RenderizeCardList from './components/RenderizeCardList';
 import FilterInputs from './components/FilterInputs';
+import logo from './images/logo.svg';
 
 class App extends React.Component {
   constructor(props) {
@@ -142,7 +144,7 @@ class App extends React.Component {
       nameSearch, rareSearch, trunfoSearch, disabledFilter } = this.state;
     return (
       <main>
-        <h1>Tryunfo </h1>
+        <img src={ logo } alt="logo" />
         <section className="form-container">
           <Form
             cardName={ cardName }

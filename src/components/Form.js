@@ -9,61 +9,68 @@ export default class Form extends React.Component {
       cardAttr3, cardImage, cardRare, cardTrunfo,
       hasTrunfo, isSaveButtonDisabled } = this.props;
     return (
-      <form>
+      <form className="form">
         <h1>Adicione uma carta</h1>
         <label>
-          Nome da Carta
+          Nome
           <input
             name="cardName"
+            className="card-name"
             type="text"
             value={ cardName }
             onChange={ onInputChange }
             data-testid="name-input"
-            maxLength={ 40 }
+            maxLength={ 36 }
           />
         </label>
         <label>
-          Descrição da Carta
+          Descrição
           <textarea
             name="cardDescription"
+            className="card-description"
             value={ cardDescription }
             onChange={ onInputChange }
             data-testid="description-input"
-            maxLength={ 70 }
-            rows={ 5 }
+            maxLength={ 60 }
+            rows={ 2 }
           />
         </label>
-        <label>
-          Atributo 1
-          <input
-            name="cardAttr1"
-            type="number"
-            value={ cardAttr1 }
-            onChange={ onInputChange }
-            data-testid="attr1-input"
-          />
-        </label>
-        <label>
-          Atributo 2
-          <input
-            name="cardAttr2"
-            type="number"
-            value={ cardAttr2 }
-            onChange={ onInputChange }
-            data-testid="attr2-input"
-          />
-        </label>
-        <label>
-          Atributo 3
-          <input
-            name="cardAttr3"
-            type="number"
-            value={ cardAttr3 }
-            onChange={ onInputChange }
-            data-testid="attr3-input"
-          />
-        </label>
-        <label>
+        <div className="attr-container">
+          <label className="inline">
+            Ataque
+            <input
+              name="cardAttr1"
+              type="number"
+              value={ cardAttr1 }
+              onChange={ onInputChange }
+              data-testid="attr1-input"
+              max={ 90 }
+            />
+          </label>
+          <label className="inline">
+            Defesa
+            <input
+              name="cardAttr2"
+              type="number"
+              value={ cardAttr2 }
+              onChange={ onInputChange }
+              data-testid="attr2-input"
+              max={ 90 }
+            />
+          </label>
+          <label className="inline">
+            Vida
+            <input
+              name="cardAttr3"
+              type="number"
+              value={ cardAttr3 }
+              onChange={ onInputChange }
+              data-testid="attr3-input"
+              max={ 90 }
+            />
+          </label>
+        </div>
+        <label className="inline">
           Imagem
           <input
             name="cardImage"
@@ -71,6 +78,7 @@ export default class Form extends React.Component {
             value={ cardImage }
             onChange={ onInputChange }
             data-testid="image-input"
+            className="card-image-input"
           />
         </label>
         <label>
