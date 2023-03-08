@@ -14,18 +14,24 @@ export default class Card extends React.Component {
           alt={ cardName }
           data-testid="image-card"
         />
-        <p data-testid="description-card">{cardDescription}</p>
+        <p
+          data-testid="description-card"
+          className="description-card"
+        >
+          {cardDescription}
+
+        </p>
         <p data-testid="attr1-card">
           Ataque:
-          {cardAttr1}
+          <span>{cardAttr1}</span>
         </p>
         <p data-testid="attr2-card">
           Defesa:
-          {cardAttr2}
+          <span>{cardAttr2}</span>
         </p>
         <p data-testid="attr3-card">
           Pontos de Vida:
-          {cardAttr3}
+          <span>{cardAttr3}</span>
         </p>
         <div className="rare-trunfo-container">
           <p

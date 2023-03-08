@@ -30,6 +30,15 @@
   word-wrap: break-word;
 }
 
+.card .description-card {
+  background-color: #053b7e;
+  color: white;
+  font-size: 14px;
+  margin-top: 0;
+  padding: 5px;
+  text-align: justify;
+}
+
 .card .rare-trunfo-container {
   color: white;
   display: flex;
