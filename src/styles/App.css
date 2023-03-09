@@ -5,30 +5,16 @@ body {
   /* Créditos: https://bgjar.com/animated-shape  */
   background-image: url('../images/background.svg');
   background-origin: padding-box;
-  background-repeat: no-repeat;
   background-size: cover;
   color: black(42, 42, 42);
-
 }
 
-.card-list {
-  align-items: center;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 16px;
-  justify-content: center;
-  width: 100%;
-}
 
 main {
   align-items: center;
   display: flex;
   flex-direction: column;
   justify-content: center;
-}
-
-main img {
-  width: 20%;
 }
 
 .form-container {
@@ -41,11 +27,11 @@ main img {
   gap: 16px;
   height: 100%;
   justify-content: space-around;
-  max-width: 950px;
+  max-width: 360px;
   padding: 16px;
   width: 100%;
 
-  /* pra celular pode ser 200px */
+  /* pra celular pode ser 1000px */
 }
 
 button {
@@ -65,4 +51,21 @@ button:not( [ disabled ] ):hover {
   background-color: var(--primary-color);
   border: white;
   color: white;
+}
+
+.card-list {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  justify-content: center;
+  width: 100%;
+}
+
+@media only screen and ( min-width : 768px ) {
+
+  .form-container {
+    max-width: 1000px;
+  }
+
 }
