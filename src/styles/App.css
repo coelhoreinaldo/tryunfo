@@ -1,3 +1,4 @@
+/* stylelint-disable selector-no-qualifying-type */
 body {
   background-attachment: fixed;
 
@@ -31,9 +32,29 @@ main {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2) , 0 8px 20px 0 rgba(0, 0, 0, 0.2);
   color: var(--primary-color);
   display: flex;
+  flex-wrap: wrap;
   gap: 16px;
   height: 500px;
   justify-content: space-around;
   padding: 16px;
   width: 50%;
+}
+
+button {
+  background-color: var(--terciary-color);
+  border: 2px solid var(--secondary-color);
+  border-radius: 6px;
+  color: black;
+  transition: 0.3s;
+  width: 64px;
+}
+
+button[ disabled ] {
+  background-color: aliceblue;
+}
+
+button:hover {
+  background-color: var(--primary-color);
+  border: white;
+  color: white;
 }
