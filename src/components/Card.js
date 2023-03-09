@@ -14,13 +14,16 @@ export default class Card extends React.Component {
           alt={ cardName }
           data-testid="image-card"
         />
-        <p
-          data-testid="description-card"
-          className="description-card"
-        >
-          {cardDescription}
+        <div className="card-description-container">
 
-        </p>
+          <p
+            data-testid="description-card"
+            className="description-card"
+          >
+            {cardDescription}
+
+          </p>
+        </div>
         <div className="card-attrs-container">
           <section className="card-attr">
             <p data-testid="attr1-card">

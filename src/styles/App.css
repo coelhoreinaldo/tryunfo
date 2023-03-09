@@ -41,8 +41,11 @@ main img {
   gap: 16px;
   height: 100%;
   justify-content: space-around;
+  max-width: 950px;
   padding: 16px;
-  width: 50%;
+  width: 100%;
+
+  /* pra celular pode ser 200px */
 }
 
 button {
