@@ -3,12 +3,14 @@
   background-color: var(--terciary-color);
   border-radius: 8px;
   display: flex;
+  flex-direction: column;
   gap: 8px;
   height: 100%;
   justify-content: space-around;
   margin: 32px 0;
+  max-width: 280px;
   padding: 16px;
-  width: fit-content;
+  width: 100%;
 }
 
 .filter-inputs h3 {
@@ -27,5 +29,13 @@
   display: flex;
   flex-direction: row-reverse;
   width: 100%;
+}
+
+@media only screen and ( min-width : 768px ) {
+
+  .filter-inputs {
+    flex-direction: row;
+    max-width: fit-content;
+  }
 }
 
