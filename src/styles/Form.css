@@ -83,7 +83,7 @@ label {
 .form .super-trunfo-input {
   align-items: center;
   display: flex;
-  flex-direction: row;
+  flex-direction: row-reverse;
 }
 
 .form .super-trunfo-input input {
