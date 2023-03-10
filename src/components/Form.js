@@ -36,7 +36,7 @@ export default class Form extends React.Component {
           />
         </label>
         <div className="attr-container">
-          <label className="inline">
+          <label className="label-input-flex">
             Ataque
             <input
               name="cardAttr1"
@@ -47,7 +47,7 @@ export default class Form extends React.Component {
               max={ 90 }
             />
           </label>
-          <label className="inline">
+          <label className="label-input-flex">
             Defesa
             <input
               name="cardAttr2"
@@ -58,7 +58,7 @@ export default class Form extends React.Component {
               max={ 90 }
             />
           </label>
-          <label className="inline">
+          <label className="label-input-flex">
             Vida
             <input
               name="cardAttr3"
@@ -70,7 +70,7 @@ export default class Form extends React.Component {
             />
           </label>
         </div>
-        <label className="inline">
+        <label className="label-input-flex">
           Imagem
           <input
             name="cardImage"
