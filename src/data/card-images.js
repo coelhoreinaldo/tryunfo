@@ -21,9 +21,18 @@ cardImages.set('gai', require('./card-images/gai.jpg'));
 cardImages.set('gaara', require('./card-images/gaara.jpg'));
 cardImages.set('kankurou', require('./card-images/kankurou.jpg'));
 cardImages.set('temari', require('./card-images/temari.jpg'));
+cardImages.set('zabuza', require('./card-images/zabuza.jpg'));
+cardImages.set('haku', require('./card-images/haku.jpg'));
+cardImages.set('jiraiya', require('./card-images/jiraiya.jpg'));
+cardImages.set('tsunade', require('./card-images/tsunade.jpg'));
+cardImages.set('orochimaru', require('./card-images/orochimaru.jpg'));
+cardImages.set('minato', require('./card-images/minato.jpg'));
+cardImages.set('hashirama', require('./card-images/hashirama.jpg'));
+cardImages.set('madara', require('./card-images/madara.jpg'));
 cardImages.set('itachi', require('./card-images/itachi.jpg'));
 cardImages.set('shisui', require('./card-images/shisui.jpg'));
 cardImages.set('pain', require('./card-images/pain.jpg'));
+cardImages.set('tobi', require('./card-images/tobi.jpg'));
 // Adicione outras imagens conforme necessário
 
 export default cardImages;

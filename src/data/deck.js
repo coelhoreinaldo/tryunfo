@@ -1,11 +1,6 @@
-// gaara
-// temari
-// kankurou
+/* eslint-disable max-lines */
 // zabuza
 // haku
-// itachi
-// shisui
-// pain
 // jiraya
 // orochimaru
 // tsunade
@@ -19,12 +14,14 @@ const muitoRaro = 'muito raro';
 const raro = 'raro';
 const normal = 'normal';
 
-const jouninLeaf = 'Aldeia da Folha, Jounin';
+const leafJounin = 'Aldeia da Folha, Jounin';
+const leafHokage = 'Aldeia da Folha, Hokage';
+const leafNukenin = 'Aldeia da Folha, Ninja Renegado';
 
 const deck = [
   {
     cardName: 'Naruto Uzumaki',
-    cardDescription: 'Aldeia da Folha, Hokage',
+    cardDescription: leafHokage,
     cardImage: naruto,
     cardRare: muitoRaro,
     cardAttr1: 90,
@@ -44,7 +41,7 @@ const deck = [
   },
   {
     cardName: 'Sakura Haruno',
-    cardDescription: jouninLeaf,
+    cardDescription: leafJounin,
     cardImage: cardImages.get('sakura'),
     cardRare: muitoRaro,
     cardAttr1: 50,
@@ -54,7 +51,7 @@ const deck = [
   },
   {
     cardName: 'Kakashi Hatake',
-    cardDescription: 'Aldeia da Folha, Hokage',
+    cardDescription: leafHokage,
     cardImage: cardImages.get('kakashi'),
     cardRare: muitoRaro,
     cardAttr1: 70,
@@ -64,7 +61,7 @@ const deck = [
   },
   {
     cardName: 'Shikamaru Nara',
-    cardDescription: jouninLeaf,
+    cardDescription: leafJounin,
     cardImage: cardImages.get('shikamaru'),
     cardRare: raro,
     cardAttr1: 50,
@@ -74,7 +71,7 @@ const deck = [
   },
   {
     cardName: 'Chouji Akimichi',
-    cardDescription: jouninLeaf,
+    cardDescription: leafJounin,
     cardImage: cardImages.get('chouji'),
     cardRare: normal,
     cardAttr1: 71,
@@ -84,7 +81,7 @@ const deck = [
   },
   {
     cardName: 'Ino Yamanaka',
-    cardDescription: jouninLeaf,
+    cardDescription: leafJounin,
     cardImage: cardImages.get('ino'),
     cardRare: normal,
     cardAttr1: 42,
@@ -94,7 +91,7 @@ const deck = [
   },
   {
     cardName: 'Asuma Sarutobi',
-    cardDescription: jouninLeaf,
+    cardDescription: leafJounin,
     cardImage: cardImages.get('asuma'),
     cardRare: normal,
     cardAttr1: 60,
@@ -104,7 +101,7 @@ const deck = [
   },
   {
     cardName: 'Hinata Hyuuga',
-    cardDescription: jouninLeaf,
+    cardDescription: leafJounin,
     cardImage: cardImages.get('hinata'),
     cardRare: normal,
     cardAttr1: 45,
@@ -114,7 +111,7 @@ const deck = [
   },
   {
     cardName: 'Shino Aburame',
-    cardDescription: jouninLeaf,
+    cardDescription: leafJounin,
     cardImage: cardImages.get('shino'),
     cardRare: normal,
     cardAttr1: 56,
@@ -124,7 +121,7 @@ const deck = [
   },
   {
     cardName: 'Kurenai Yuuhi',
-    cardDescription: jouninLeaf,
+    cardDescription: leafJounin,
     cardImage: cardImages.get('kurenai'),
     cardRare: normal,
     cardAttr1: 40,
@@ -134,7 +131,7 @@ const deck = [
   },
   {
     cardName: 'Neji Hyuuga',
-    cardDescription: jouninLeaf,
+    cardDescription: leafJounin,
     cardImage: cardImages.get('neji'),
     cardRare: normal,
     cardAttr1: 64,
@@ -144,7 +141,7 @@ const deck = [
   },
   {
     cardName: 'Rock Lee',
-    cardDescription: jouninLeaf,
+    cardDescription: leafJounin,
     cardImage: cardImages.get('rock-lee'),
     cardRare: normal,
     cardAttr1: 72,
@@ -154,7 +151,7 @@ const deck = [
   },
   {
     cardName: 'Tenten',
-    cardDescription: jouninLeaf,
+    cardDescription: leafJounin,
     cardImage: cardImages.get('tenten'),
     cardRare: normal,
     cardAttr1: 32,
@@ -163,8 +160,8 @@ const deck = [
     cardTrunfo: false,
   },
   {
-    cardName: 'Gai',
-    cardDescription: jouninLeaf,
+    cardName: 'Might Guy',
+    cardDescription: leafJounin,
     cardImage: cardImages.get('gai'),
     cardRare: normal,
     cardAttr1: 90,
@@ -203,8 +200,68 @@ const deck = [
     cardTrunfo: false,
   },
   {
+    cardName: 'Zabuza',
+    cardDescription: 'Aldeia da Névoa, Jounin',
+    cardImage: cardImages.get('zabuza'),
+    cardRare: raro,
+    cardAttr1: 56,
+    cardAttr2: 48,
+    cardAttr3: 48,
+    cardTrunfo: false,
+  },
+  {
+    cardName: 'Haku',
+    cardDescription: 'Aldeia da Névoa, Anbu',
+    cardImage: cardImages.get('haku'),
+    cardRare: raro,
+    cardAttr1: 64,
+    cardAttr2: 40,
+    cardAttr3: 32,
+    cardTrunfo: false,
+  },
+  {
+    cardName: 'Jiraiya',
+    cardDescription: 'Aldeia da Folha, Ninja Lendário',
+    cardImage: cardImages.get('jiraiya'),
+    cardRare: muitoRaro,
+    cardAttr1: 64,
+    cardAttr2: 78,
+    cardAttr3: 64,
+    cardTrunfo: false,
+  },
+  {
+    cardName: 'Tsunade',
+    cardDescription: 'Aldeia da Folha, Ninja Lendária',
+    cardImage: cardImages.get('tsunade'),
+    cardRare: muitoRaro,
+    cardAttr1: 64,
+    cardAttr2: 64,
+    cardAttr3: 78,
+    cardTrunfo: false,
+  },
+  {
+    cardName: 'Orochimaru',
+    cardDescription: 'Aldeia do Som, Ninja Lendário',
+    cardImage: cardImages.get('orochimaru'),
+    cardRare: muitoRaro,
+    cardAttr1: 78,
+    cardAttr2: 64,
+    cardAttr3: 64,
+    cardTrunfo: false,
+  },
+  {
+    cardName: 'Minato Namikaze',
+    cardDescription: leafHokage,
+    cardImage: cardImages.get('minato'),
+    cardRare: muitoRaro,
+    cardAttr1: 80,
+    cardAttr2: 56,
+    cardAttr3: 64,
+    cardTrunfo: false,
+  },
+  {
     cardName: 'Itachi Uchiha',
-    cardDescription: 'Aldeia da Folha, Ninja Renegado',
+    cardDescription: leafNukenin,
     cardImage: cardImages.get('itachi'),
     cardRare: muitoRaro,
     cardAttr1: 72,
@@ -214,7 +271,7 @@ const deck = [
   },
   {
     cardName: 'Shisui Uchiha',
-    cardDescription: jouninLeaf,
+    cardDescription: leafJounin,
     cardImage: cardImages.get('shisui'),
     cardRare: muitoRaro,
     cardAttr1: 64,
@@ -226,10 +283,40 @@ const deck = [
     cardName: 'Pain',
     cardDescription: 'Aldeia da Chuva, Ninja Renegado',
     cardImage: cardImages.get('pain'),
-    cardRare: normal,
+    cardRare: muitoRaro,
     cardAttr1: 80,
     cardAttr2: 80,
     cardAttr3: 48,
+    cardTrunfo: false,
+  },
+  {
+    cardName: 'Hashirama Senju',
+    cardDescription: leafHokage,
+    cardImage: cardImages.get('hashirama'),
+    cardRare: muitoRaro,
+    cardAttr1: 56,
+    cardAttr2: 48,
+    cardAttr3: 80,
+    cardTrunfo: false,
+  },
+  {
+    cardName: 'Madara Uchiha',
+    cardDescription: leafNukenin,
+    cardImage: cardImages.get('madara'),
+    cardRare: muitoRaro,
+    cardAttr1: 56,
+    cardAttr2: 80,
+    cardAttr3: 48,
+    cardTrunfo: false,
+  },
+  {
+    cardName: 'Tobi',
+    cardDescription: leafNukenin,
+    cardImage: cardImages.get('tobi'),
+    cardRare: muitoRaro,
+    cardAttr1: 70,
+    cardAttr2: 70,
+    cardAttr3: 70,
     cardTrunfo: false,
   },
 ];
