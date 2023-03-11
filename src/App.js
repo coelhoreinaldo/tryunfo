@@ -17,9 +17,9 @@ class App extends React.Component {
     this.state = {
       cardName: '',
       cardDescription: '',
-      cardAttr1: '0',
-      cardAttr2: '0',
-      cardAttr3: '0',
+      cardAttr1: 0,
+      cardAttr2: 0,
+      cardAttr3: 0,
       cardImage: '',
       cardRare: 'normal',
       cardTrunfo: false,
@@ -64,7 +64,9 @@ class App extends React.Component {
   onInputChange({ target }) {
     const { name, value } = target;
 
-    const newValue = target.type === 'checkbox' ? target.checked : value;
+    let newValue = value;
+    if (target.type === 'checkbox') newValue = target.checked;
+    if (target.type === 'number') newValue = Number(value);
     this.setState({
       [name]: newValue,
     }, this.validateFields);
@@ -94,9 +96,9 @@ class App extends React.Component {
       cardName: '',
       cardDescription: '',
       cardImage: '',
-      cardAttr1: '0',
-      cardAttr2: '0',
-      cardAttr3: '0',
+      cardAttr1: 0,
+      cardAttr2: 0,
+      cardAttr3: 0,
       cardRare: 'normal',
       isSaveButtonDisabled: true,
       cardTrunfo: false,
@@ -111,12 +113,12 @@ class App extends React.Component {
 
     const attrs = [cardAttr1, cardAttr2, cardAttr3];
     const MAX_TOTAL = 210;
-    const ATTR_SUM = attrs.reduce((acc, curr) => Number(acc) + Number(curr), 0);
+    const ATTR_SUM = attrs.reduce((acc, curr) => acc + curr, 0);
     const sumIsLessThanMax = ATTR_SUM <= MAX_TOTAL;
 
     const MAX_ATTR = 90;
-    const lessThan90 = attrs.every((attr) => Number(attr) <= MAX_ATTR
-    && Number(attr) >= 0);
+    const lessThan90 = attrs.every((attr) => attr <= MAX_ATTR
+    && attr >= 0);
 
     if (lengthCantBe0 && sumIsLessThanMax && lessThan90) {
       this.setState({ isSaveButtonDisabled: false });
