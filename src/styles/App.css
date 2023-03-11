@@ -87,4 +87,9 @@ button:not( [ disabled ] ):hover {
     margin: 8px;
   }
 
+  .card-list {
+    justify-content: space-between;
+    max-width: 1000px;
+  }
+
 }
