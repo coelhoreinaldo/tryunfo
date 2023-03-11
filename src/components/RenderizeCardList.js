@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Card from './Card';
+import '../styles/App.css';
 
 export default class RenderizeCardList extends React.Component {
   render() {
@@ -19,6 +20,7 @@ export default class RenderizeCardList extends React.Component {
           .map((card) => (
             <div
               key={ `${card.cardName} div` }
+              className="card-n-btn"
             >
               <Card
                 key={ card.cardName }
