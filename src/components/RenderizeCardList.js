@@ -16,7 +16,8 @@ export default class RenderizeCardList extends React.Component {
             }
             return card.cardRare === rareSearch;
           })
-          .filter((card) => card.cardName.includes(nameSearch))
+          .filter((card) => card.cardName.toLowerCase()
+            .includes(nameSearch.toLowerCase()))
           .map((card) => (
             <div
               key={ `${card.cardName} div` }
