@@ -148,27 +148,13 @@ class App extends React.Component {
       hasTrunfo, isSaveButtonDisabled, cards,
       nameSearch, rareSearch, trunfoSearch, disabledFilter } = this.state;
     return (
-      <main>
-        <img src={ logo } alt="logo" />
-        <section className="form-container">
-          <Form
-            cardName={ cardName }
-            cardDescription={ cardDescription }
-            cardAttr1={ cardAttr1 }
-            cardAttr2={ cardAttr2 }
-            cardAttr3={ cardAttr3 }
-            cardImage={ cardImage }
-            cardRare={ cardRare }
-            cardTrunfo={ cardTrunfo }
-            hasTrunfo={ hasTrunfo }
-            isSaveButtonDisabled={ isSaveButtonDisabled }
-            onInputChange={ this.onInputChange }
-            onSaveButtonClick={ this.onSaveButtonClick }
-          />
-          <div>
-            <h1>Pré-Visualização</h1>
-
-            <Card
+      <>
+        <header>
+          <img src={ logo } alt="logo" />
+        </header>
+        <main>
+          <section className="form-container">
+            <Form
               cardName={ cardName }
               cardDescription={ cardDescription }
               cardAttr1={ cardAttr1 }
@@ -177,23 +163,41 @@ class App extends React.Component {
               cardImage={ cardImage }
               cardRare={ cardRare }
               cardTrunfo={ cardTrunfo }
+              hasTrunfo={ hasTrunfo }
+              isSaveButtonDisabled={ isSaveButtonDisabled }
+              onInputChange={ this.onInputChange }
+              onSaveButtonClick={ this.onSaveButtonClick }
             />
-          </div>
-        </section>
-        <FilterInputs
-          handleSearchChangeByName={ this.handleSearchChangeByName }
-          handleSearchChangeByRare={ this.handleSearchChangeByRare }
-          handleSearchChangeByTrunfo={ this.handleSearchChangeByTrunfo }
-          disabledFilter={ disabledFilter }
-        />
-        <RenderizeCardList
-          cards={ cards }
-          nameSearch={ nameSearch }
-          rareSearch={ rareSearch }
-          trunfoSearch={ trunfoSearch }
-          deleteCard={ this.deleteCard }
-        />
-      </main>
+            <div>
+              <h1>Pré-Visualização</h1>
+
+              <Card
+                cardName={ cardName }
+                cardDescription={ cardDescription }
+                cardAttr1={ cardAttr1 }
+                cardAttr2={ cardAttr2 }
+                cardAttr3={ cardAttr3 }
+                cardImage={ cardImage }
+                cardRare={ cardRare }
+                cardTrunfo={ cardTrunfo }
+              />
+            </div>
+          </section>
+          <FilterInputs
+            handleSearchChangeByName={ this.handleSearchChangeByName }
+            handleSearchChangeByRare={ this.handleSearchChangeByRare }
+            handleSearchChangeByTrunfo={ this.handleSearchChangeByTrunfo }
+            disabledFilter={ disabledFilter }
+          />
+          <RenderizeCardList
+            cards={ cards }
+            nameSearch={ nameSearch }
+            rareSearch={ rareSearch }
+            trunfoSearch={ trunfoSearch }
+            deleteCard={ this.deleteCard }
+          />
+        </main>
+      </>
     );
   }
 }
