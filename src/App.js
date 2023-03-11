@@ -8,6 +8,7 @@ import './styles/variables.css';
 import RenderizeCardList from './components/RenderizeCardList';
 import FilterInputs from './components/FilterInputs';
 import logo from './images/logo.svg';
+import deck from './data/deck';
 
 class App extends React.Component {
   constructor(props) {
@@ -24,7 +25,7 @@ class App extends React.Component {
       cardTrunfo: false,
       hasTrunfo: false,
       isSaveButtonDisabled: true,
-      cards: [],
+      cards: [...deck],
       nameSearch: '',
       rareSearch: '',
       trunfoSearch: false,
