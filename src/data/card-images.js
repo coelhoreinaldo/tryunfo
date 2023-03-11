@@ -18,6 +18,12 @@ cardImages.set('neji', require('./card-images/neji.jpg'));
 cardImages.set('rock-lee', require('./card-images/rock-lee.jpg'));
 cardImages.set('tenten', require('./card-images/tenten.jpg'));
 cardImages.set('gai', require('./card-images/gai.jpg'));
+cardImages.set('gaara', require('./card-images/gaara.jpg'));
+cardImages.set('kankurou', require('./card-images/kankurou.jpg'));
+cardImages.set('temari', require('./card-images/temari.jpg'));
+cardImages.set('itachi', require('./card-images/itachi.jpg'));
+cardImages.set('shisui', require('./card-images/shisui.jpg'));
+cardImages.set('pain', require('./card-images/pain.jpg'));
 // Adicione outras imagens conforme necessário
 
 export default cardImages;

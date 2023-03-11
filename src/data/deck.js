@@ -1,19 +1,3 @@
-// naruto
-// sasuke
-// sakura
-// kakashi
-// shikamaru
-// ino
-// choji
-// asuma
-// hinata
-// kiba e akamaru
-// shino
-// kurenai
-// neji
-// rock lee
-// tenten
-// gai
 // gaara
 // temari
 // kankurou
@@ -186,6 +170,66 @@ const deck = [
     cardAttr1: 90,
     cardAttr2: 80,
     cardAttr3: 72,
+    cardTrunfo: false,
+  },
+  {
+    cardName: 'Gaara',
+    cardDescription: 'Aldeia da Areia, Hokage',
+    cardImage: cardImages.get('gaara'),
+    cardRare: raro,
+    cardAttr1: 56,
+    cardAttr2: 80,
+    cardAttr3: 64,
+    cardTrunfo: false,
+  },
+  {
+    cardName: 'Temari',
+    cardDescription: 'Aldeia da Areia, Jounin',
+    cardImage: cardImages.get('temari'),
+    cardRare: normal,
+    cardAttr1: 48,
+    cardAttr2: 32,
+    cardAttr3: 48,
+    cardTrunfo: false,
+  },
+  {
+    cardName: 'Kankurou',
+    cardDescription: 'Aldeia da Areia, Jounin',
+    cardImage: cardImages.get('kankurou'),
+    cardRare: normal,
+    cardAttr1: 40,
+    cardAttr2: 48,
+    cardAttr3: 32,
+    cardTrunfo: false,
+  },
+  {
+    cardName: 'Itachi Uchiha',
+    cardDescription: 'Aldeia da Folha, Ninja Renegado',
+    cardImage: cardImages.get('itachi'),
+    cardRare: muitoRaro,
+    cardAttr1: 72,
+    cardAttr2: 72,
+    cardAttr3: 56,
+    cardTrunfo: false,
+  },
+  {
+    cardName: 'Shisui Uchiha',
+    cardDescription: jouninLeaf,
+    cardImage: cardImages.get('shisui'),
+    cardRare: muitoRaro,
+    cardAttr1: 64,
+    cardAttr2: 64,
+    cardAttr3: 64,
+    cardTrunfo: false,
+  },
+  {
+    cardName: 'Pain',
+    cardDescription: 'Aldeia da Chuva, Ninja Renegado',
+    cardImage: cardImages.get('pain'),
+    cardRare: normal,
+    cardAttr1: 80,
+    cardAttr2: 80,
+    cardAttr3: 48,
     cardTrunfo: false,
   },
 ];
