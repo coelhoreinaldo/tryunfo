@@ -28,7 +28,7 @@
 // minato
 // madara
 // hashirama
-import naruto from './cards-images/naruto.jpg';
+import cardImages from './card-images';
 
 // const newCard = {
 //   cardName,
@@ -44,7 +44,7 @@ import naruto from './cards-images/naruto.jpg';
 const deck = [
   { cardName: 'Naruto Uzumaki',
     cardDescription: 'Aldeia da Folha, Hokage',
-    cardImage: naruto,
+    cardImage: cardImages.get('naruto'),
     cardRare: 'muito raro',
     cardAttr1: 90,
     cardAttr2: 50,
