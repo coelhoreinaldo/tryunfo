@@ -15,6 +15,7 @@ main {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  margin: 0 16px;
 }
 
 .form-container {
@@ -66,6 +67,10 @@ button:not( [ disabled ] ):hover {
 
   .form-container {
     max-width: 1000px;
+  }
+
+  main {
+    margin: 8px;
   }
 
 }
