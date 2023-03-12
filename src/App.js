@@ -169,7 +169,7 @@ class App extends React.Component {
               onInputChange={ this.onInputChange }
               onSaveButtonClick={ this.onSaveButtonClick }
             />
-            <div>
+            <div className="preview">
               <h1>Pré-Visualização</h1>
 
               <Card

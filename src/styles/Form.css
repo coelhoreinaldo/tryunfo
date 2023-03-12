@@ -72,6 +72,10 @@ label {
   width: 100%;
 }
 
+.form select {
+  height: 24px;
+}
+
 .button-trunfo-container {
   align-items: center;
   display: flex;

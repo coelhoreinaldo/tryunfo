@@ -103,6 +103,11 @@ footer {
   text-align: center;
 }
 
+.preview {
+  max-width: 343px;
+  width: 100%;
+}
+
 footer a {
   color: var(--primary-color);
   text-decoration: none;
