@@ -53,6 +53,7 @@ button {
   border: none;
   border-radius: 6px;
   color: black;
+  cursor: pointer;
   transition: 0.3s;
   width: 64px;
 }
@@ -94,11 +95,23 @@ footer {
   background-color: var(--terciary-color);
   display: flex;
   flex-direction: column;
+  font-size: 12px;
   justify-content: center;
   margin-top: 64px;
   padding: 8px 0;
   position: relative;
   text-align: center;
+}
+
+footer a {
+  color: var(--primary-color);
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+footer a:hover {
+  color: var(--secondary-color);
+  text-decoration: none;
 }
 
 footer * {
@@ -120,6 +133,10 @@ footer * {
   .card-list {
     justify-content: space-between;
     max-width: 1000px;
+  }
+
+  footer {
+    font-size: 16px;
   }
 
 }

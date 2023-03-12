@@ -13,7 +13,14 @@ class Footer extends Component {
         <p>
           Imagens dos personagens retiradas do site
           {' '}
-          <a href="https://myanimelist.net/anime/1735/Naruto__Shippuuden">MyAnimeList.</a>
+          <a href="https://myanimelist.net/anime/1735/Naruto__Shippuuden">MyAnimeList</a>
+          .
+        </p>
+        <p>
+          Background SVG por
+          {' '}
+          <a href="https://bgjar.com/">BGJar</a>
+          .
         </p>
         <p>
           Todos os personagens da série de mangá e anime Naruto
