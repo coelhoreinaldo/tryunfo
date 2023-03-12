@@ -89,6 +89,23 @@ button:not( [ disabled ] ):hover {
   color: white;
 }
 
+footer {
+  align-items: center;
+  background-color: var(--terciary-color);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: 64px;
+  padding: 8px 0;
+  position: relative;
+  text-align: center;
+}
+
+footer * {
+  max-width: 720px;
+  width: 100%;
+
+}
 
 @media only screen and ( min-width : 768px ) {
 
