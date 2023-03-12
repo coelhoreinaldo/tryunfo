@@ -9,6 +9,7 @@ import RenderizeCardList from './components/RenderizeCardList';
 import FilterInputs from './components/FilterInputs';
 import logo from './images/logo.svg';
 import deck from './data/deck';
+import Footer from './components/Footer';
 
 class App extends React.Component {
   constructor(props) {
@@ -168,7 +169,7 @@ class App extends React.Component {
               onInputChange={ this.onInputChange }
               onSaveButtonClick={ this.onSaveButtonClick }
             />
-            <div>
+            <div className="preview">
               <h1>Pré-Visualização</h1>
 
               <Card
@@ -197,6 +198,7 @@ class App extends React.Component {
             deleteCard={ this.deleteCard }
           />
         </main>
+        <Footer />
       </>
     );
   }
