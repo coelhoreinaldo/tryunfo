@@ -36,7 +36,7 @@ export default class Form extends React.Component {
           />
         </label>
         <div className="attr-container">
-          <label className="inline">
+          <label className="label-input-flex">
             Ataque
             <input
               name="cardAttr1"
@@ -47,7 +47,7 @@ export default class Form extends React.Component {
               max={ 90 }
             />
           </label>
-          <label className="inline">
+          <label className="label-input-flex">
             Defesa
             <input
               name="cardAttr2"
@@ -58,7 +58,7 @@ export default class Form extends React.Component {
               max={ 90 }
             />
           </label>
-          <label className="inline">
+          <label className="label-input-flex">
             Vida
             <input
               name="cardAttr3"
@@ -70,7 +70,7 @@ export default class Form extends React.Component {
             />
           </label>
         </div>
-        <label className="inline">
+        <label className="label-input-flex">
           Imagem
           <input
             name="cardImage"
@@ -127,9 +127,9 @@ export default class Form extends React.Component {
 Form.propTypes = {
   cardName: PropTypes.string.isRequired,
   cardDescription: PropTypes.string.isRequired,
-  cardAttr1: PropTypes.string.isRequired,
-  cardAttr2: PropTypes.string.isRequired,
-  cardAttr3: PropTypes.string.isRequired,
+  cardAttr1: PropTypes.number.isRequired,
+  cardAttr2: PropTypes.number.isRequired,
+  cardAttr3: PropTypes.number.isRequired,
   cardImage: PropTypes.string.isRequired,
   cardRare: PropTypes.string.isRequired,
   cardTrunfo: PropTypes.bool.isRequired,

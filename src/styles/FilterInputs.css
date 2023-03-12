@@ -3,15 +3,20 @@
   background-color: var(--terciary-color);
   border-radius: 8px;
   display: flex;
+  flex-direction: column;
   gap: 8px;
+  height: 100%;
   justify-content: space-around;
   margin: 32px 0;
+  max-width: 280px;
   padding: 16px;
-  width: 30%;
+  width: 100%;
 }
 
 .filter-inputs h3 {
   margin: 0;
+  text-align: center;
+  width: 100%;
 }
 
 .filter-inputs input, .filter-inputs select {
@@ -24,5 +29,15 @@
 .filter-inputs .super-trunfo {
   display: flex;
   flex-direction: row-reverse;
+  justify-content: center;
+  width: 100%;
+}
+
+@media only screen and ( min-width : 768px ) {
+
+  .filter-inputs {
+    flex-direction: row;
+    max-width: 1000px;
+  }
 }
 

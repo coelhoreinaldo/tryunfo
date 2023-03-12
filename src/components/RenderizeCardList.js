@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Card from './Card';
+import '../styles/App.css';
 
 export default class RenderizeCardList extends React.Component {
   render() {
@@ -15,10 +16,12 @@ export default class RenderizeCardList extends React.Component {
             }
             return card.cardRare === rareSearch;
           })
-          .filter((card) => card.cardName.includes(nameSearch))
+          .filter((card) => card.cardName.toLowerCase()
+            .includes(nameSearch.toLowerCase()))
           .map((card) => (
             <div
               key={ `${card.cardName} div` }
+              className="card-n-btn"
             >
               <Card
                 key={ card.cardName }
@@ -51,9 +54,9 @@ RenderizeCardList.propTypes = {
     cardDescription: PropTypes.string.isRequired,
     cardImage: PropTypes.string.isRequired,
     cardRare: PropTypes.string.isRequired,
-    cardAttr1: PropTypes.string.isRequired,
-    cardAttr2: PropTypes.string.isRequired,
-    cardAttr3: PropTypes.string.isRequired,
+    cardAttr1: PropTypes.number.isRequired,
+    cardAttr2: PropTypes.number.isRequired,
+    cardAttr3: PropTypes.number.isRequired,
     cardTrunfo: PropTypes.bool.isRequired,
   })).isRequired,
   nameSearch: PropTypes.string.isRequired,
