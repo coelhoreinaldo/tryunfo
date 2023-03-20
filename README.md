@@ -1,6 +1,10 @@
 # 🎴 Tryunfo
 
+## 📘 Sobre
+
 Um jogo de cartas no estilo Super Trunfo com o tema Naruto.
+
+## 🧩 Funcionalidades
 
 - Criar novas cartas;
 - Visualizar uma prévia;
