@@ -17,6 +17,7 @@ Projeto construído utilizando React.js.
 - Props;
 - Forms em React;
 - Metodologia TDD (Test Driven Development).
+- Mobile First;
 
 ## 🛠️ Como executar o projeto?
 
