@@ -41,7 +41,7 @@ Projeto construído utilizando React.js.
 
 <img src='./src/images/grade.png' alt='nota final'/>
 
-## 👥 Créditos
+## ©️ Copyright
 
 - Logo "Tryunfo" e Figma - Trybe.
 - Todos os personagens da série de mangá e anime Naruto pertencem a editora Shueisha e ao escritor Masashi Kishimoto.
