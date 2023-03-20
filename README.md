@@ -1,4 +1,4 @@
-# 🛒 Tryunfo
+# 🎴 Tryunfo
 
 Um jogo de cartas com o tema de Naruto no estilo Super Trunfo.
 
