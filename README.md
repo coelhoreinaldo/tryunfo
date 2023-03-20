@@ -1,13 +1,34 @@
-# :construction: README customizado em construção ! :construction:
-<!-- Olá, Tryber!
-Esse é apenas um arquivo inicial para o README do seu projeto no qual você pode customizar e reutilizar todas as vezes que for executar o trybe-publisher.
+# 🛒 Tryunfo
 
-Para deixá-lo com a sua cara, basta alterar o seguinte arquivo da sua máquina: ~/.student-repo-publisher/custom/_NEW_README.md
+Um jogo de cartas com o tema de Naruto no estilo Super Trunfo.
 
-É essencial que você preencha esse documento por conta própria, ok?
-Não deixe de usar nossas dicas de escrita de README de projetos, e deixe sua criatividade brilhar!
-:warning: IMPORTANTE: você precisa deixar nítido:
-- quais arquivos/pastas foram desenvolvidos por você; 
-- quais arquivos/pastas foram desenvolvidos por outra pessoa estudante;
-- quais arquivos/pastas foram desenvolvidos pela Trybe.
--->
+- Criar novas cartas;
+- Visualizar uma prévia;
+- Adicioná-las ao deck;
+- Visualizar as cartas do deck.
+
+Acesse [aqui](https://coelhoreinaldo.github.io/tryunfo).
+
+## ⚛️ Ferramentas
+
+Projeto construído utilizando React.js.
+
+- States;
+- Props;
+- Forms em React;
+- Metodologia TDD (Test Driven Development).
+
+## 🛠️ Como executar o projeto?
+
+1. Instalando dependências
+
+`npm install`
+
+2. Executando a aplicação
+
+`npm start`
+
+## 👥 Créditos
+
+Logo "Tryunfo" - Trybe.
+Todos os personagens da série de mangá e anime Naruto pertencem a editora Shueisha e ao escritor Masashi Kishimoto.
