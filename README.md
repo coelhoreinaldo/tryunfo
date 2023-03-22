@@ -1,5 +1,7 @@
 # 🎴 Tryunfo
 
+<img src='./src/images/tryunfo1.png' alt='tryunfo '/>
+
 ## 📘 Sobre
 
 Um jogo de cartas no estilo Super Trunfo com o tema Naruto.
